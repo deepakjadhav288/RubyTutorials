@@ -1,0 +1,7 @@
+ 
+  279  git add .
+  284  git commit -m "my first ruby and git experitment"
+  291  git status
+  292  git branch
+  294  git push origin master
+
