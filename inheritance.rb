@@ -32,7 +32,7 @@ class Account
 	private :increment_acc_count
 end
 class Saving < Account
-	MIN_BALANCE = 1000
+	MIN_BALANCE = 500
 	attr_accessor :acc_balance,:interest
 	def deposit(amount)
 		puts "credited #{amount} to your Account"
@@ -48,7 +48,7 @@ class Saving < Account
 	end
 
 	def permit_withdrawal(amount)
-		if @acc_balance-amount>500		
+		if @acc_balance-amount>MIN_BALANCE		
 			return true
 		else
 			return false
@@ -110,5 +110,4 @@ while input !=5 do
 		customers[credit_to].deposit(credit_amount)
 	end
 end
-
 

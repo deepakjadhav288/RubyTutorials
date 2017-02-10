@@ -22,3 +22,13 @@ puts "strftime : #{time2.strftime("%Y-%m-%d   %I:%M:%S %P")}" #time formatting d
 now = Time.now
 future = now+60
 puts "#{now}-->#{future}"
+
+
+#---------------- calculate age -----------------------
+require "date"
+
+def cal_age(date_of_birth)
+	days_till_date = (Date.today-Date.parse(date_of_birth)).to_i
+	age = days_till_date/365
+end
+puts"Age = #{cal_age("2010-2-1")}"
