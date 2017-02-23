@@ -52,6 +52,42 @@ File.rename("test.txt","new_test.txt")
 aFile = File.new("new_test.txt","r")
 aFile.each_byte {|ch| putc ch}
 puts "\n"
-
+aFile.close
 File.delete("new_test.txt") #--------> deleting file 
 
+#----------- CHANGING FILE MODES AND OWNERSHIPS ------------------
+puts " ------------ CHANGING FILE MODES AND OWNERSHIPS --------"
+aFile = File.new("test1.txt","w")
+aFile.chmod(0711)
+
+aFile.syswrite("writing to file by changing mode from read to write")
+aFile.close
+
+#------------ FILE OPENING USING OPEN METHOD ----------------------------
+puts " ----------- file inquiries ----------------"
+
+puts "test exists? ===>#{File.exists?("test.txt")}"
+puts "test1 exists? ===> #{File.exists?("test1.txt")}"
+
+puts "test1.txt is a file? ===> #{File.file?("test1.txt")}"
+puts "test.txt is a file? ===> #{File.file?("test.txt")}"
+
+puts "test1 is directory? ===> #{File::directory?("test1.txt")}"
+
+
+puts "test1 is readable? ===> #{File.readable?("test1.txt")}"
+puts "test1 is writable? ===> #{File.writable?("test1.txt")}"
+puts "test1 is executable? ===> #{File.executable?("test1.txt")}"
+
+puts "test1 size zero? ===> #{File.zero?("test1.txt")}"
+puts "test1 size ====> #{File.size?("test1.txt")}"
+
+puts "test1 type ===> #{File::ftype("test1.txt")}"
+
+puts "test1.txt : created time ===>#{File::ctime("test1.txt")}"
+puts "test1.txt : last aaccessed time ===> #{File::atime("test1.txt")}"
+puts "test1.txt : modified time ===> #{File::mtime("test1.txt")}"
+
+Dir.mkdir("created dir")
+pause = gets
+Dir.delete("created dir")
