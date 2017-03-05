@@ -1,0 +1,1 @@
+puts (1..3).reduce(0) {|p, n| p = p+n**2}
