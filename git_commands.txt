@@ -5,3 +5,13 @@
   292  git branch
   294  git push origin master
 
+
+
+  postgres commands
+
+  sudo service postgresql start		=> start postgres server
+  sudo -u postgres psql postgres 	=> start postgres prompt
+  \deu+ 							=> show list of user
+  \du 								=> show all users
+  \c dbname  						=> select database
+

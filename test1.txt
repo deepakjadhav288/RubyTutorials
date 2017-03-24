@@ -1,0 +1,1 @@
+writing to file by changing mode from read to write

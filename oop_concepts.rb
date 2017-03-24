@@ -1,5 +1,5 @@
 class Box
-	attr_accessor:width, :height
+	attr_accessor :width, :height
 	@@box_count=0
 
 	def initialize(w,h)
