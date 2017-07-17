@@ -17,3 +17,4 @@ arr1.each do |i|
 	sum = sum + i
 end
 puts "sum = #{sum}"
+#added code here from gui
