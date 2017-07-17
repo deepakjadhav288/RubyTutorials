@@ -1,4 +1,5 @@
 
+
 require 'pg'
 class Postgres_DB
 	def initialize
@@ -78,8 +79,4 @@ loop {
 
 
 
-#p1 = Postgres_DB.new("sample","postgres","deepak")
-#p1.add_row "student","5,'sumit'"
-#p1.prepare_user_statement 6,"santosh"
-#p1.select_all_records_from "student"
-#p1.close
+
